@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.logo-container {
+    padding: 15px 20px;
+    background-color: #2d3748;
+    display: flex;
+}
+
+.logo {
+    height: 50px;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-logo {
+    position: absolute;
+    top: 17%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 20%;
+    max-height: 20%;
+}
+
+.info-pastillas {
+    padding: 40px 20px;
+    background: url(./imagenes/carretera3.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+}
+
+.info-pastillas h2 {
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 1.8em;
+}
+
+.contenedor-pastillas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pastilla {
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    transition: transform 0.3s ease;
+    position: relative;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pastilla:hover {
+    transform: translateY(-5px);
+}
+
+.señales-transito img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.contenido-personajes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background-color: white;
+}
+
+.pastilla:hover .contenido-personajes {
+    opacity: 1;
+}
+
+.pastilla:hover .señales-transito {
+    opacity: 0;
+}
+
+.character-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.contenido-personajes h3 {
+    margin-bottom: 8px;
+    color: #2d3748;
+    text-align: center;
+}
+
+.contenido-personajes p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.noticia {
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: url(./imagenes/articulofondo.png) no-repeat center center;
+    background-size: cover;
+}
+
+.noticia h2 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-align: center;
+    width: 650px;
+    border-radius: 15px;
+}
+
+.imagen-noticia {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.contenido-noticia {
+    color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    text-align: justify;
+    background-color: #404041;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.contenido-noticia p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.reviews {
+    position: relative;
+    padding: 40px 20px;
+    background-color: #2d3748;
+    color: white;
+    text-align: center;
+}
+
+.reviews h2 {
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    color: white;
+}
+
+.reviews-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.review img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.review-contenido p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.review-contenido strong {
+    color: #ffd700;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #1a202c;
+    color: #cbd5e0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.redes-sociales img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        justify-content: center;
+    }
+
+    .banner-logo {
+        top: 17%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pastilla {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .noticia {
+        padding: 40px 20px;
+        background-position: center center;
+        min-height: 600px;
+    }
+
+    .info-pastillas {
+        padding: 40px 20px;
+        background-position: center center;
+        min-height: 500px;
+        background: url(./imagenes/carretera1.png) no-repeat center center;
+        background-size: cover;
+        text-align: center;
+        background-size: auto;
+    }
+
+    .imagen-noticia {
+        max-width: 100%;
+    }
+
+    .noticia h2 {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .review {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .review-form {
+        padding: 30px 15px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .logo-container {
+        justify-content: flex-start;
+    }
+
+    .banner-logo {
+        top: 17%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .contenedor-pastillas {
+        justify-content: space-around;
+    }
+
+    .info-pastillas {
+    padding: 40px 20px;
+    background: url(./imagenes/carretera2.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    background-size: auto;
+    background-position: center center;
+    min-height: 500px;
+    }
+
+    .pastilla {
+        width: 45%;
+    }
+
+    .noticia {
+        gap: 25px;
+        background-size: auto;
+        background-position: center center;
+        min-height: 600px;
+    }
+
+    .info-pastillas {
+        background-size: auto;
+        background-position: center center;
+        min-height: 500px;
+    }
+
+    .imagen-noticia {
+        max-width: 700px;
+    }
+
+    .noticia h2 {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .review {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .review-form {
+        margin: 0 20px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        justify-content: flex-start;
+        padding-left: 5%;
+    }
+
+    .banner {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .banner-logo {
+        top: 17%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .contenedor-pastillas {
+        justify-content: space-between;
+    }
+
+    .pastilla {
+        width: 200px;
+    }
+
+    .imagen-noticia {
+        max-width: 800px;
+    }
+
+    .review {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
